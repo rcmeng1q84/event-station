@@ -58,7 +58,8 @@ struct msg_t msgs[NUM_MSGS];
 // For Goertzel calculations
 int Q1,Q2;
 
-const int LEDs[] = {5, 3}; // PWM pins
+// PWM: 3, 5, 6, 9, 10, and 11. Provide 8-bit PWM output with the analogWrite function.
+const int LEDs[] = {5, 3};
 int life = 10;
 boolean processBytes();
 
