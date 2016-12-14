@@ -58,7 +58,8 @@ struct msg_t msgs[NUM_MSGS];
 // For Goertzel calculations
 int Q1,Q2;
 
-const int LED_1 = 8;
+const int LEDs[] = {5, 3}; // PWM pins
+int life = 10;
 boolean processBytes();
 
 // Start of the MorseEncoder
@@ -122,6 +123,10 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200); 
   
+  // life of the station
+  pinMode(LEDs[0], OUTPUT);
+  pinMode(LEDs[1], OUTPUT);
+  
   Serial.println(STAMP_MS);
   int x = -10;
   Serial.println(x>>2); // What is this for? Testing bit rotation for negatives? 
@@ -141,6 +146,8 @@ bool use_goertzel = true;
 int team = 0; // TO be set by some button
 
 void loop() {
+  analogWrite(LEDs[team], life * 255 / 10);
+  analogWrite(LEDs[1 - team], 0);
   if (use_goertzel) {
     byte msg[] = { // Headling
       (byte)'T', (byte)String(team)[0], (byte) 'H', (byte)'E', (byte)'A'};
