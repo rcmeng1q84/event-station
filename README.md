@@ -1,5 +1,10 @@
 # event-station
 stations that have active components to engage the exchange of resources. some can be mobile.
+# Conceptual Components
+
+A switch to toggle "healing" and "power-up";
+
+Life indicator of a station. 
 
 # Memo working with audio comm
 ## toneAC
@@ -25,7 +30,11 @@ The connection is illustrated by the pin9-R1-SP1-pin10 part in the whole circuit
 
 ![PCB](/hardware/PCB.png?raw=true "PCB")
 
-## Encoding and decoding with the [Goertzel Algorithm](https://en.wikipedia.org/wiki/Goertzel_algorithm)
+## Encoding and decoding with the Goertzel Algorithm
+Basically, using 2 frequencies to indicate 1 or 0, then every 8 bit represent a byte. 
+
+[The mathmatical models](https://en.wikipedia.org/wiki/Goertzel_algorithm)
+
 Ideally, it should work like the following:
 ??? restored to the original time-domain sequence. 
 ```
@@ -37,4 +46,10 @@ if (new_byte_arrived) {
 }
 // And we get the exact "T0HEL"
 ```
-However, it is not successfully reproduced. 
+### ADC Interrupt to sample audio
+Way more fast than analogRead, but has to keep the interrupt handling routine short in execution time. Just simple evaluation or basic interger arithmetic ops. 
+
+It would be every exciting to have got it to work. However, it is not successfully reproduced. 
+
+## Endcoding and Decoding with Morse code
+Follow the similar high level procedure, also unsuccessful. 
