@@ -57,6 +57,11 @@ Way more fast than analogRead, but has to keep the interrupt handling routine sh
 As suggested from the Vest team, we tried this library too, which follows the similar high level procedure, also unsuccessful. 
 # The main takeaway is "Interrupt"
 For digital pins: it is 2 and 3 on the Mini. 
+```
+  pinMode(switch_pin, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(switch_pin), flip, CHANGE);
+```
+
 For analog, to capture change on A0:
 ```
   cli();//diable interrupts
