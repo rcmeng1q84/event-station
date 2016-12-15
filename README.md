@@ -6,7 +6,7 @@ stations that have active components to engage the exchange of resources. some c
 Replacement to the standard Arduino tone library with twice the volume, higher quality and higher frequency.
 According to this [Arduino Playground](http://playground.arduino.cc/Code/ToneAC) It is a library that produces an alternating current (AC) between two pins. But which two? It is not in a convenient location to find. 
 
-We were able to find [some clue](https://codebender.cc/example/toneAC/toneAC_demo#toneAC_demo.ino) that
+We managed to find [some clue](https://codebender.cc/example/toneAC/toneAC_demo#toneAC_demo.ino) indicating that pins 9 and 10 for Arduino Pro Mini that we have been having so much fun with. 
 ```
 // ---------------------------------------------------------------------------
 // Connect your piezo buzzer (without internal oscillator) or speaker to these pins:
