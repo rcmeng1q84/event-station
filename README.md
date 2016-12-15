@@ -52,4 +52,4 @@ Way more fast than analogRead, but has to keep the interrupt handling routine sh
 It would be every exciting to have got it to work. However, it is not successfully reproduced. 
 
 ## Endcoding and Decoding with Morse code
-Follow the similar high level procedure, also unsuccessful. 
+As suggested from the Vest team, we tried this library too, which follows the similar high level procedure, also unsuccessful. 
