@@ -118,7 +118,7 @@ void morseEncoderTone::stop_signal(bool endOfChar, char signalType)
 // End of MorseEncoder
 
 int tcount = 0;
-volatile bool use_goertzel = false;
+volatile bool use_goertzel = true;
 volatile int cnt = 0;
 int team = 0; // TO be set by some button
 
