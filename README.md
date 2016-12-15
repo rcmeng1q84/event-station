@@ -47,10 +47,11 @@ if (new_byte_arrived) {
 }
 // And we get the exact "T0HEL"
 ```
+It would be every exciting to have got it to work. However, it is not successfully reproduced. 
+![Wrong decoding](/firmware/wrong_decoding.png "Wrong decoding")
+
 ### ADC Interrupt to sample audio
 Way more fast than analogRead, but has to keep the interrupt handling routine short in execution time. Just simple evaluation or basic interger arithmetic ops. 
-
-It would be every exciting to have got it to work. However, it is not successfully reproduced. 
 
 ## Endcoding and Decoding with Morse code
 As suggested from the Vest team, we tried this library too, which follows the similar high level procedure, also unsuccessful. 
