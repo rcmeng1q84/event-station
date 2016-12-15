@@ -60,7 +60,7 @@ int Q1,Q2;
 
 // PWM: 3, 5, 6, 9, 10, and 11. Provide 8-bit PWM output with the analogWrite function.
 const int LEDs[] = {5, 3};
-const int switch_pin = 8;
+const int switch_pin = 2;
 int life = 10;
 boolean processBytes();
 
@@ -117,9 +117,22 @@ void morseEncoderTone::stop_signal(bool endOfChar, char signalType)
 }
 // End of MorseEncoder
 
+int tcount = 0;
+volatile bool use_goertzel = false;
+volatile int cnt = 0;
+int team = 0; // TO be set by some button
+
 // Pin mapping 
 const byte morseOutPin = 13;  // make sure this is compatible with the Tone class!
 morseEncoderTone morseOutput(morseOutPin);
+
+void flip() {
+  cnt ++;
+  if(cnt == 2) {
+    cnt = 0;
+    use_goertzel = !use_goertzel;
+  }
+}
 
 void setup() {
   // put your setup code here, to run once:
@@ -128,7 +141,9 @@ void setup() {
   // life of the station
   pinMode(LEDs[0], OUTPUT);
   pinMode(LEDs[1], OUTPUT);
-  pinMode(switch_pin, INPUT);
+//  pinMode(switch_pin, INPUT);
+  pinMode(switch_pin, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(switch_pin), flip, CHANGE);
   
   Serial.println(STAMP_MS);
   int x = -10;
@@ -144,30 +159,19 @@ void setup() {
   Serial.println("Setting up morse output!");
   morseOutput.setspeed(13);
 }
-int tcount = 0;
-bool use_goertzel = false;
-int team = 0; // TO be set by some button
 
 void loop() {
   // flash or shine
   analogWrite(LEDs[team], life * 255 / 10);
   analogWrite(LEDs[1 - team], 0);
-  // switch use_goertzel
-  // Ruichen Meng did this routine, which I adapted
-//  if(digitalRead(switch_pin)==LOW) {
-//     delay(10); 
-//     if(digitalRead(switch_pin)==HIGH) {
-//      Serial.println("Switching");
-//      use_goertzel = !use_goertzel;
-//     }
-//  }
-//  Serial.println(digitalRead(switch_pin));
+  
   // sending messages
   if (use_goertzel) {
     byte msg[] = { // Headling
       (byte)'T', (byte)String(team)[0], (byte) 'H', (byte)'E', (byte)'A'};
     FMSimpleSend(msg,sizeof(msg));
 //    delay(500);
+    morseOutput.encode();
   } else {
     morseOutput.encode();
     morseOutput.write('T');
