@@ -34,6 +34,7 @@ The connection is illustrated by the pin9-R1-SP1-pin10 part in the whole circuit
 Basically, we are trying to replicate the approach [posted here](http://blog.theultimatelabs.com/2013/05/wirelessly-communicating-with-arduino.html), using 2 frequencies to indicate 1 or 0, then every 8 bit represent a byte. The author tried FFT, DTMF and finally suggested Goertzel is the best option based on the initial experiment. It is still a back-and-forth between time-domain and frequency-domain. 
 
 Preview of the [The mathmatical models](https://en.wikipedia.org/wiki/Goertzel_algorithm)
+
 ![Digital Filter](https://wikimedia.org/api/rest_v1/media/math/render/svg/4cc5e858f5999c11b56059a70d6ca78368e6cf5d "Digital Filter")
 
 Ideally, it should work like the following:
