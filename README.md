@@ -7,7 +7,7 @@ A switch to toggle "healing" and "power-up";
 Life indicator of a station. 
 
 # Memo working with audio comm
-## toneAC
+## toneAC, required by the Geortzel approach
 Replacement to the standard Arduino tone library with twice the volume, higher quality and higher frequency.
 According to this [Arduino Playground](http://playground.arduino.cc/Code/ToneAC) It is a library that produces an alternating current (AC) between two pins. But which two? It is not in a convenient location to find. 
 
@@ -31,12 +31,12 @@ The connection is illustrated by the pin9-R1-SP1-pin10 part in the whole circuit
 ![PCB](/hardware/PCB.png?raw=true "PCB")
 
 ## Encoding and decoding with the Goertzel Algorithm
-Basically, using 2 frequencies to indicate 1 or 0, then every 8 bit represent a byte. 
+Basically, we are trying to replicate the approach [posted here](http://blog.theultimatelabs.com/2013/05/wirelessly-communicating-with-arduino.html), using 2 frequencies to indicate 1 or 0, then every 8 bit represent a byte. The author tried FFT, DTMF and finally suggested Goertzel is the best option based on the initial experiment. It is still a back-and-forth between time-domain and frequency-domain. 
 
-[The mathmatical models](https://en.wikipedia.org/wiki/Goertzel_algorithm)
+Preview of the [The mathmatical models](https://en.wikipedia.org/wiki/Goertzel_algorithm)
+![Digital Filter](https://wikimedia.org/api/rest_v1/media/math/render/svg/4cc5e858f5999c11b56059a70d6ca78368e6cf5d "Digital Filter")
 
 Ideally, it should work like the following:
-??? restored to the original time-domain sequence. 
 ```
 // From the station, loop this message constantly to heal members of team 0. 
 sendCommand("T0HEL");
