@@ -19,7 +19,7 @@ We managed to find [some clue](https://codebender.cc/example/toneAC/toneAC_demo#
 // ---------------------------------------------------------------------------
 //...
 ```
-
+The connection is illustrated by the pin9-R1-SP1-pin10 part in the whole circuit. 
 
 ![Circuit](/hardware/circuit.png?raw=true "Circuit")
 
