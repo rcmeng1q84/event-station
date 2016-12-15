@@ -53,3 +53,5 @@ It would be every exciting to have got it to work. However, it is not successful
 
 ## Endcoding and Decoding with Morse code
 As suggested from the Vest team, we tried this library too, which follows the similar high level procedure, also unsuccessful. 
+# The main takeaway is "Interrupt"
+For digital pins: it is 2 and 3 on the Mini. 
