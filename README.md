@@ -24,3 +24,17 @@ The connection is illustrated by the pin9-R1-SP1-pin10 part in the whole circuit
 ![Circuit](/hardware/circuit.png?raw=true "Circuit")
 
 ![PCB](/hardware/PCB.png?raw=true "PCB")
+
+## Encoding and decoding with the [Goertzel Algorithm](https://en.wikipedia.org/wiki/Goertzel_algorithm)
+Ideally, it should work like the following:
+??? restored to the original time-domain sequence. 
+```
+// From the station, loop this message constantly to heal members of team 0. 
+sendCommand("T0HEL");
+// At the receiving end (Vest or weapons like Rod)
+if (new_byte_arrived) {
+  Serail.print(char_decoded)
+}
+// And we get the exact "T0HEL"
+```
+However, it is not successfully reproduced. 
