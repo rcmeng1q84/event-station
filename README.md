@@ -11,10 +11,13 @@ Life indicator of a station.
 1. Gikfun Active Buzzer x2;
 1. 100 Omh Resistor x2;
 1. 10K Omh Resister x1;
+1. 220 Omh Resister x2;
 1. Switch x1;
-1. LED x1;
+1. LED x2;
 
 The reason that 2 buzzers are used is that we had been experimenting with both Geortzel algorithm and Morse code, neither working properly. If we had got it done, only one buzzer will be enough, though how they are powered is a bit different, as illustrated in the circuit diagram. To summarize, Geortzel "requires" the toneAC approach, while Morese code use the normal buzzer set-up. 
+
+2 LEDs were intende to indicating different teams by color, however, by the end of this course, we only had one LED on board. But the code is supposed to work for 2 teams, with pins 3 and 5 to connect them, both with PWM capabilities. 
 
 # Usage
 * **The switch** 
