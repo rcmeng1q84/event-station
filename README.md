@@ -116,3 +116,4 @@ For analog, to capture change on A0:
 
   sei();//enable interrupts
 ```
+ADC interrupt is handled in the ISR() routine, with a signiture of a fixed name and a vector argument. Some tutorial says this ISR() is another kind of loop(), which is true from a very naive aspective. 
