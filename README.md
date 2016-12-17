@@ -83,6 +83,17 @@ For digital pins: it is 2 and 3 on the Mini.
   pinMode(switch_pin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(switch_pin), flip, CHANGE);
 ```
+And the routine in the interrupt handler "flip" usually applies the following logic:
+```
+void flip() {
+  cnt ++;
+  if(cnt == 2) { // A stable button press is supposed to change twice: 0 -> 1 and then 1 -> 0, but this is not prefect. 
+    cnt = 0;
+    use_goertzel = !use_goertzel;
+  }
+}
+```
+We do not if the handler could get the value as an argument, which may be more convenient. And from this point, we do think it is not appropriate to invoke digitalRead() here. Since the interrupt handler is supposed to be fast and digitalRead() may also issue interrupt which will cause dead lock. This is infered from my previous knowledge of Linux kernel dev, but not sure if it still holds true. 
 
 For analog, to capture change on A0:
 ```
