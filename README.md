@@ -5,6 +5,8 @@ stations that have active components to engage the exchange of resources. some c
 * A switch to toggle "healing" and "power-up";
 * Life indicator of a station. 
 
+![Concept](models/concept_Artboard\ 1.png "Concept")
+
 The main station (totem) idea we had in mind first, which is big in terms of size:
 ![Big one](models/render.jpg "Tower")
 
