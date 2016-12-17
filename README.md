@@ -17,10 +17,11 @@ Life indicator of a station.
 # Usage
 * The switch 
 
-It is intended for owners to switch team betweeen 0 and 1. However, currently, to experiment on 2 audio communication approaches, thi switch is used to toggle between Goertzel and Morese code. 
+  It is intended for owners to switch team betweeen 0 and 1. However, currently, to experiment on 2 audio communication approaches, thi switch is used to toggle between Goertzel and Morese code. 
 
 * The audio signal
-It is meant for the players to heal their health points / energy / life, whatever it is called. The player have to get close enough to let the microphone on the vest to pick it up and decode it. 
+
+  It is meant for the players to heal their health points / energy / life, whatever it is called. The player have to get close enough to let the microphone on the vest to pick it up and decode it. 
 
 # Memo working with audio comm
 ## toneAC, required by the Geortzel approach
