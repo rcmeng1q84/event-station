@@ -2,9 +2,15 @@
 stations that have active components to engage the exchange of resources. some can be mobile.
 # Conceptual Components
 
-A switch to toggle "healing" and "power-up";
+* A switch to toggle "healing" and "power-up";
+* Life indicator of a station. 
 
-Life indicator of a station. 
+The main station (totem) idea we had in mind first, which is big in terms of size:
+![Big one](models/render.jpg "Tower")
+
+After some in-class discussion, we were advised to try an attachable approach to make something smaller in size and more affordable for fabrication. The idea is shown as follows:
+
+[To be uploaded]
 
 # Electronic Components
 1. Arduino Pro Mini ATmega328 3.3V 8Mhz x1;
