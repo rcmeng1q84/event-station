@@ -6,6 +6,22 @@ A switch to toggle "healing" and "power-up";
 
 Life indicator of a station. 
 
+# Electronic Components
+1. Arduino Pro Mini x1;
+1. Gikfun Active Buzzer x2;
+1. 100 Omh Resistor x2;
+1. 10K Omh Resister x1;
+1. Switch x1;
+1. LED x1;
+
+# Usage
+* The switch 
+
+It is intended for owners to switch team betweeen 0 and 1. However, currently, to experiment on 2 audio communication approaches, thi switch is used to toggle between Goertzel and Morese code. 
+
+* The audio signal
+It is meant for the players to heal their health points / energy / life, whatever it is called. The player have to get close enough to let the microphone on the vest to pick it up and decode it. 
+
 # Memo working with audio comm
 ## toneAC, required by the Geortzel approach
 Replacement to the standard Arduino tone library with twice the volume, higher quality and higher frequency.
