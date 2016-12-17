@@ -14,6 +14,8 @@ Life indicator of a station.
 1. Switch x1;
 1. LED x1;
 
+The reason that 2 buzzers are used is that we had been experimenting with both Geortzel algorithm and Morse code, neither working properly. If we had got it done, only one buzzer will be enough, though how they are powered is a bit different, as illustrated in the circuit diagram. To summarize, Geortzel "requires" the toneAC approach, while Morese code use the normal buzzer set-up. 
+
 # Usage
 * **The switch** 
 
