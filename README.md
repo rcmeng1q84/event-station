@@ -2,17 +2,21 @@
 stations that have active components to engage the exchange of resources. some can be mobile.
 # Conceptual Components
 
-* A switch to toggle "healing" and "power-up";
-* Life indicator of a station. 
+* A switch to toggle teams;
+* HP indicator for a station. 
 
 ![Concept](models/concept_Artboard\ 1.png "Concept")
 
 The main station (totem) idea we had in mind first, which is big in terms of size:
 ![Big one](models/render.jpg "Tower")
 
-After some in-class discussion, we were advised to try an attachable approach to make something smaller in size and more affordable for fabrication. The idea is shown as follows:
+After some in-class discussion, we were advised to try an attachable approach to make something smaller in size and more affordable for fabrication. However due to miscommunication, this approach is not sufficiently investigated. 
 
-[To be uploaded]
+# How It Works
+To indicate the HP status of a station (team), IR receivers shall be employed to achieve this. This part is not incorporated in the design. 
+
+The essential idea to heal players on the same team or boost their weapons is that a buzzer will be broadcasting signals constantly and only when players on the same side get close enough for the microphone on their vest to pick up the signal, to decode it and apply the corresponding effects. As illustrated in the figure below, team id is part of the commands, so that the vest knows if the signal from the station belongs to the same side and then play accordingly. 
+![Comm](models/concept_Artboard\ 4.png "Comm")
 
 # Electronic Components
 1. Arduino Pro Mini ATmega328 3.3V 8Mhz x1;
@@ -36,7 +40,7 @@ The reason that 2 buzzers are used is that we had been experimenting with both G
 
   It is meant for the players to heal their health points / energy / life, whatever it is called. The player have to get close enough to let the microphone on the vest to pick it up and decode it. 
 
-# Memo working with audio comm
+# Experiments Of Sound Communication
 ## toneAC, required by the Geortzel approach
 Replacement to the standard Arduino tone library with twice the volume, higher quality and higher frequency.
 According to this [Arduino Playground](http://playground.arduino.cc/Code/ToneAC) It is a library that produces an alternating current (AC) between two pins. But which two? It is not in a convenient location to find. 
