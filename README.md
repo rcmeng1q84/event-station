@@ -133,8 +133,6 @@ ADC interrupt is handled in the ISR() routine, with a signiture of a fixed name 
 # Model Fabrication Process
 The station is built with internal frame as th esupporting structure and the outer layer of triangular facade that showcases game side with its unique stripes.
 
-![Totem](/models/Totem.jpg "Totem")
-
 The Frame is built with 5/32 steel rods and 3d printed rubber joints,and the rods sit in the holes of the joints. No adhesives is required as the rods was squeezed into the holes, whose diameter is actually sightly smaller than the rods. The elasticity of 3d print rubber allowed this method to work.
 
 ![Frame](/models/frame.jpg "frame")
@@ -144,6 +142,8 @@ The facade is made with 1/8 plexiglass sheets and black chalk board wrap, which 
 ![facade](/models/Photo Dec 12, 18 18 52.jpg "facede")
 
 Eventually, The facade is glued onto the joints, which finishes the builidng process.
+
+![Totem](/models/Totem.jpg "Totem")
 
 Prior to fabrication, the whole model was created in Solidworks, where all the parts was assembled and evaluated, and key parameters was exported, like lengths of steel rods sections. Then the facade silhouette is imported into Rhino, based on which the stripes was parametrically generated with the help of Grasshopper, a plug-in for Rhinoeroes.
 The Grasshopper script for the stripes is shown below. The intal Crv are the triangular silhouettes of facades.
