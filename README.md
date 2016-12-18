@@ -62,6 +62,8 @@ The connection is illustrated by the pin9-R1-SP1-pin10 part in the whole circuit
 
 ![Circuit](/hardware/circuit.png?raw=true "Circuit")
 
+To utilize interrupt on digital pins, the push button (SW1) was later attached to pin 2, as reflected in the code. 
+
 ![PCB](/hardware/PCB.png?raw=true "PCB")
 
 ## Encoding and decoding with the Goertzel Algorithm
