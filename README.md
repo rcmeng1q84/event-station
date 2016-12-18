@@ -7,10 +7,23 @@ stations that have active components to engage the exchange of resources. some c
 
 ![Concept](models/concept_Artboard\ 1.png "Concept")
 
+The concept has 3 main features:
+1. Area of effect
+We use the acoustic signal to achieve the area effect. The totem is similar to transmitters keeps sending acoustic signals. So all of the players around a totem can receive sound signals equally and then get healed.
+
+2.Deactivatedable
+It means that the totem can be destroyed by the enemies. The purpose of doing this characteristic is to improve the playability. Players can develop strategies together to think about how to protect their totems or attack enemy’s totem.
+
+3.Switchable system (future plan)
+The totem’s functionality is not limited to healing. We also designed other features like increasing team’s defense ability and increasing the attack damage. Players can switch different functions by buttons. Players can only have one effect at the same time.
+
+
 The main station (totem) idea we had in mind first, which is big in terms of size:
 ![Big one](models/render.jpg "Tower")
 
 After some in-class discussion, we were advised to try an attachable approach to make something smaller in size and more affordable for fabrication. However due to miscommunication, this approach is not sufficiently investigated. 
+
+
 
 # How It Works
 To indicate the HP status of a station (team), IR receivers shall be employed to achieve this. This part is not incorporated in the design. 
