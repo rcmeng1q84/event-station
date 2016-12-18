@@ -146,6 +146,5 @@ The facade is made with 1/8 plexiglass sheets and black chalk board wrap, which 
 Eventually, The facade is glued onto the joints, which finishes the builidng process.
 
 Prior to fabrication, the whole model was created in Solidworks, where all the parts was assembled and evaluated, and key parameters was exported, like lengths of steel rods sections. Then the facade silhouette is imported into Rhino, based on which the stripes was parametrically generated with the help of Grasshopper, a plug-in for Rhinoeroes.
-
-The Grasshopper script is as follows, The intal Crv are the triangles silhouette of facades.
+The Grasshopper script for the stripes is shown below. The intal Crv are the triangular silhouettes of facades.
 ![grasshopper](/models/grasshopper script.png "grasshopper")
