@@ -132,7 +132,9 @@ ADC interrupt is handled in the ISR() routine, with a signiture of a fixed name 
 
 # Model Fabrication Process
 The station is built with internal frame as th esupporting structure and the outer layer of triangular facade that showcases game side with its unique stripes.
-![Big one](models/totoem.jpg "Tower")
+
+![Big one](/models/totem.jpg "Tower")
+
 The Frame is built with 5/32 steel rods and 3d printed rubber joints,and the rods sit in the holes of the joints. No adhesives is required as the rods was squeezed into the holes, whose diameter is actually sightly smaller than the rods. The elasticity of 3d print rubber allowed this method to work.
 
 The facade is made with 1/8 plexiglass sheets and black chalk board wrap, which is applied on one side of the plexiglass. Wrapped sheets is then cut and etched by laser cutter, during which process the stripes was created as laser will etch the wrap out.
